@@ -1,4 +1,5 @@
 const http = require('http');
+const port = process.env.PORT || 3000
 
 const server = http.createServer(function (req, res) {
   req.on('data', function (data) {
@@ -13,7 +14,7 @@ const server = http.createServer(function (req, res) {
   });
 });
 
-server.listen(3000, (err) => {
+server.listen(port, (err) => {
   if (err) {
     console.log('bad things');
     return;
