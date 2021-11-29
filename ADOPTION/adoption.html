@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADOPTION FORM</title>
+    <link rel="stylesheet" href="adoption.css">
+    <script src="#"></script>
+</head>
+<body>
+    <section>
+        <form id="AdoptApp" action="#" method="post">
+            <fieldset>
+                <legend>ADOPTION APPLICATION</legend>
+                <label for="fullName">Your Name:</label>
+                <input type="text" name="fullName" id="fullName">
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" name="phone" id="phone">
+
+                <br>
+                <br>
+
+                <label for="nameOfCat">Name of cat you'd like to adopt:</label>
+                <input type="text" name="nameOfCat" id="nameOfCat">         
+
+                <br>
+                <br>
+
+                <div class="checks">
+                    <p>Have you owned a cat before?</p>
+                    <br>
+                    <input type="checkbox" name="hadCatb4" id="Yes" value="Yes"> <label for="Yes">Yes</label>
+                    
+                    <input type="checkbox" name="hadCatb4" id="No" value="No"> <label for="No"> No </label>
+                </div>
+
+                <!-- <div class="Explanation"> -->
+                    <label for="Explanation">Please provide deatils on how you will care for your new cat:</label><textarea name="Explanation" id="Explanation"></textarea>
+                </div>
+                <br>
+                <br>
+                <div class="checks">
+                    <input type="checkbox" name="emailedCopy" id="emailedCopy">
+                    <label for="emailedCopy">Send copy to my email?</label>
+                    <br>
+                    <br>
+
+                <input type="submit" id="submit" value="Submit your application.">
+
+            </fieldset>
+        </form>
+    </section>
+
+    <script>
+        let allApps = []
+        document.addEventListener('DOMContentLoaded', () => {
+            document
+                .getElementById('AdoptApp')
+                .addEventListener('submit', handleForm)
+        }); 
+
+        function handleForm(ev){
+            ev.preventDefault(); 
+            let AdoptApp = ev.target;
+            let fd = new FormData(AdoptApp);
+
+            // fd.append('api-key', 'myApiKey');
+
+            for(let key of fd.keys()) {
+                console.log(key, fd.get(key));
+            }
+
+            let url = 'http://localhost:3000/';
+            let req = new Request(url, {
+                body: fd,
+                method: 'POST'
+            });
+
+            fetch(req)
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log('Response from server')
+                    console.log(data);
+                }).then((data) => {allApps.push()
+                    console.log(allApps)
+                })
+
+                .catch(console.warn)
+        }
+    </script>
+</body>
+</html>
