@@ -6,27 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADOPTION FORM</title>
     <link rel="stylesheet" href="adoption.css">
-    <script type="module" src="ADOPTION/index.js"></script>
 </head>
 <body>
+    
+<nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">FIERCE FELINE RESCUE</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span> <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="../SITE/home.html" class="navbar__links" id="home-page">HOME</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../ABOUT US/about_us.html" target="_blank" class="navbar__links" id="about-page">ABOUT</a>
+                </li>
+            </li>
+            <li class="navbar__btn">
+                <a href="#" target="_blank"  class="button" id="adopt-today">ADOPT TODAY</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
     <section>
         <form id="AdoptApp" action="#" method="post">
             <fieldset>
                 <legend>ADOPTION APPLICATION</legend>
+
                 <label for="fullName">Your Name:</label>
-                <input type="text" name="fullName" id="fullName">
+                <input type="text" name="fullName" id="fullName" required/>
 
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required/>
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone">
+                <input type="tel" name="phone" id="phone" required/>
 
                 <br>
                 <br>
 
                 <label for="nameOfCat">Name of cat you'd like to adopt:</label>
-                <input type="text" name="nameOfCat" id="nameOfCat">         
+                <input type="text" name="nameOfCat" id="nameOfCat" required/>         
 
                 <br>
                 <br>
@@ -34,9 +57,9 @@
                 <div class="checks">
                     <p>Have you owned a cat before?</p>
                     <br>
-                    <input type="checkbox" name="hadCatb4" id="Yes" value="Yes"> <label for="Yes">Yes</label>
+                    <input type="checkbox" name="hadCatb4" id="hadCatb4" value="hadCatb4"> <label for="Yes">Yes</label>
                     
-                    <input type="checkbox" name="hadCatb4" id="No" value="No"> <label for="No"> No </label>
+                    <input type="checkbox" name="hadCatb4" id="hadCatb4" value="hadCatb4"> <label for="No"> No </label>
                 </div>
 
                 <!-- <div class="Explanation"> -->
@@ -49,42 +72,8 @@
             </fieldset>
         </form>
     </section>
-    <script>
-        let allApps = []
-        document.addEventListener('DOMContentLoaded', () => {
-            document
-                .getElementById('AdoptApp')
-                .addEventListener('submit', handleForm)
-        }); 
-
-        function handleForm(ev){
-            ev.preventDefault(); 
-            let AdoptApp = ev.target;
-            let fd = new FormData(AdoptApp);
-
-            // fd.append('api-key', 'myApiKey');
-
-            for(let key of fd.keys()) {
-                console.log(key, fd.get(key));
-            }
-
-            let url = 'http://localhost:3000/';
-            let req = new Request(url, {
-                body: fd,
-                method: 'POST'
-            });
-
-            fetch(req)
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log('Response from server')
-                    console.log(data);
-                }).then((data) => {allApps.push()
-                    console.log(allApps)
-                })
-
-                .catch(console.warn)
-        }
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src ="adoption.js">
     </script>
 </body>
 </html>
