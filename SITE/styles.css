@@ -6,6 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+
 @keyframes bounce {
     0%, 20%, 60%, 100% {
       -webkit-transform: translateY(0);
@@ -23,7 +25,6 @@
     }
   }
 
-
 body{
     margin: 0;
     text-align: center;
@@ -34,7 +35,7 @@ html{
     box-sizing: border-box;
     font-family: var(--ff-serif);
     color: var(--clr-text);
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 :root{
@@ -143,7 +144,8 @@ html{
     transition: all 0.3s ease;
   }
   
-  @media screen and (max-width: 960px) {
+  /* @media screen and (max-width: 320px)  */
+  
     .navbar__container {
       display: flex;
       justify-content: space-between;
@@ -235,7 +237,6 @@ html{
     #mobile-menu.is-active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg); 
     }
-}
   
 img{
     display:block;
@@ -250,7 +251,7 @@ h1, h2, h3, h4, p{
 
 h2, h3{
     font-family: 'Playfair Display' ;
-    font-size: 39px;
+    font-size: 27px;
     letter-spacing: .5px;
     text-align: center;
 }
@@ -258,8 +259,9 @@ h2, h3{
 h4{
     color: black;
     font-family: 'Bebas Neue', cursive;
-    font-size: 2.5em;
-    margin-top: 35px
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px
 }
 
 
@@ -274,7 +276,7 @@ p:last-child{
 }
 
 .section-title-small{
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 35px;
     margin-bottom: 35px;
 }
@@ -296,7 +298,7 @@ p:last-child{
     color:white;
     text-align: center;
     border-color: black;
-    font-size: 36px;
+    font-size: 20px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -379,12 +381,6 @@ header{
 .btn-accent:hover{
     animation: bounce 1s;}
 
-.contactInfo{
-    font-family: inherit;
-    font-size: 35px;
-    text-align: center;
-}
-
 .adoptableCats{
     display: flex;
     flex-direction: column;
@@ -395,12 +391,13 @@ header{
 .contactInfo{
     color:black;
     font-family: 'Amatic SC';
-    font-size: 35px
+    font-size: 30px;
+    text-align: center
 }
 
 .profile__img{
     border: solid black;
-    max-width: 450px;
+    max-width: 300px;
     max-height: 300px;
 }
 
@@ -408,10 +405,11 @@ header{
     border-radius: 1em;
     box-shadow: 0 0 1em rgba(0,0,0,0.2);
     text-align: center;
+    align-items: center;
 }
 
 .cat_name{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--clr-primary);
     margin-bottom: 0.5em;}
 
@@ -428,8 +426,8 @@ footer{
     display: flex;
     justify-content: center;
     gap: 10em;
-    font-size: 25px;
-    font-family: 'Playfair Display';}
+    font-size: 20px;
+    font-family: 'Playfair Display', cursive;}
 
 .footer-nav{
     list-style: none;
@@ -448,7 +446,6 @@ footer{
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 750px){
     section{
         padding: 6em, 1em;
     }
@@ -491,6 +488,4 @@ footer{
 
 .cat + .cat{
     margin-left: 1em
-}
-
 };

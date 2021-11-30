@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADOPTION FORM</title>
     <link rel="stylesheet" href="adoption.css">
-    <script src="index.js"></script>
+    <script type="module" src="ADOPTION/index.js"></script>
 </head>
 <body>
     <section>
@@ -44,18 +44,11 @@
                 </div>
                 <br>
                 <br>
-                <div class="checks">
-                    <input type="checkbox" name="emailedCopy" id="emailedCopy">
-                    <label for="emailedCopy">Send copy to my email?</label>
-                    <br>
-                    <br>
-
                 <input type="submit" id="submit" value="Submit your application.">
 
             </fieldset>
         </form>
     </section>
-
     <script>
         let allApps = []
         document.addEventListener('DOMContentLoaded', () => {
