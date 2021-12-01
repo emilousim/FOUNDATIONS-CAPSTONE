@@ -24,6 +24,8 @@ the right hand corner of the project's folder) in your machine's terminal. After
   To submit an application, navigate to the webpage by opening the index.html file as well as starting your server by running npm start. Click the button in the top right hand corner labelled "Adopt Today". Once you click that, 
 you're brought to a separate page containing the application. Fill this out, and the application will be sent to the database!
 
+![](capstone-project.gif)
+
   ## License
 
   MIT License
