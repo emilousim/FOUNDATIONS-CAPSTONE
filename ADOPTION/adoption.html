@@ -20,10 +20,6 @@
                 <li class="navbar__item">
                     <a href="../SITE/home.html" class="navbar__links" id="home-page">HOME</a>
                 </li>
-                <li class="navbar__item">
-                    <a href="../ABOUT US/about_us.html" target="_blank" class="navbar__links" id="about-page">ABOUT</a>
-                </li>
-            </li>
             <li class="navbar__btn">
                 <a href="#" target="_blank"  class="button" id="adopt-today">ADOPT TODAY</a>
             </li>
@@ -31,49 +27,43 @@
     </div>
 </nav>
 
-    <section>
-        <form id="AdoptApp" action="#" method="post">
+        <form id="AdoptApp">
             <fieldset>
                 <legend>ADOPTION APPLICATION</legend>
 
-                <label for="fullName">Your Name:</label>
-                <input type="text" name="fullName" id="fullName" required/>
+                <label for="fullname">Your Name:</label>
+                <input type="text" name="fullname" id="fullname" required/>
 
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required/>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" name="phone" id="phone" required/>
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" name="phone_number" id="phone_number" required/>
 
                 <br>
                 <br>
 
-                <label for="nameOfCat">Name of cat you'd like to adopt:</label>
-                <input type="text" name="nameOfCat" id="nameOfCat" required/>         
+                <label for="nameofcat">Name of cat you'd like to adopt:</label>
+                <input type="text" name="nameofcat" id="nameofcat" required/>         
 
                 <br>
                 <br>
 
-                <div class="checks">
+                <!-- <div class="checks">
                     <p>Have you owned a cat before?</p>
                     <br>
-                    <input type="checkbox" name="hadCatb4" id="hadCatb4" value="hadCatb4"> <label for="Yes">Yes</label>
+                    <input type="radio" name="hadCatbefore" id="hadCatYes" value="Yes"> <label for="hadCatYes"> Yes </label>
                     
-                    <input type="checkbox" name="hadCatb4" id="hadCatb4" value="hadCatb4"> <label for="No"> No </label>
-                </div>
-
-                <!-- <div class="Explanation"> -->
+                    <input type="radio" name="hadCatbefore" id="hadCatNo" value="No"> <label for="hadCatNo"> No </label>
+                </div> -->
                     <label for="Explanation">Please provide deatils on how you will care for your new cat:</label><textarea name="Explanation" id="Explanation"></textarea>
-                </div>
                 <br>
                 <br>
-                <input type="submit" id="submit" value="Submit your application.">
-
+                <button type="submit" id="submit">Submit your application.</button> 
             </fieldset>
         </form>
-    </section>
+
     <script src="../node_modules/axios/dist/axios.min.js"></script>
-    <script src ="adoption.js">
-    </script>
+    <script src ="adoption.js"></script>
 </body>
 </html>

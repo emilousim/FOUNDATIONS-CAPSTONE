@@ -1,5 +1,6 @@
 require('dotenv').config()
-
+const { default: axios } = require('axios');
+// const { application } = require('express');
 const Sequelize = require("sequelize");
 
 const { CONNECTION_STRING } = process.env;
@@ -13,16 +14,44 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 });
 
-
 module.exports = {
-    getAppAnswers: (req, res) =>{
-        // sequelize
-        // .query(
-        //     `INSERT into cc_applications(fullname, email, phone_number, nameOfCat, hadCatB4, explanation)
-        //     values('Emily Simpn', 'emilousiL@gmail.com', '225-201-8638', 'George', 'No', 'I love cats so much');`
-        // )
-        console.log(req.body)
-        // .then((dbRes) => res.status(200).send(dbRes[0]))
-        // .catch((err) => console.log(err));
-    }
-}
+    getApplicants: (req, res) =>{
+        axios.get('http://localhost:5500/adoption')
+        sequelize.query(
+            `
+            SELECT * FROM cc_applications
+            `)
+        .then((dbRes) => res.status(200).send(dbRes[0]))
+        .catch((err) => console.log(err));
+    },
+    createApplicants: (req, res) =>{
+        // axios.post('http://localhost:5500/adoption')
+        const{
+            fullname, 
+            email, 
+            phone_number, 
+            nameofcat, 
+            Explanation} = req.body
+
+        sequelize
+        .query(
+            `
+        insert into cc_applications(
+        fullname, 
+        email, 
+        phone_number, 
+        nameofcat, 
+        explanation)
+
+        VALUES (
+        '${fullname}',
+        '${email}',
+        '${phone_number}',
+        '${nameofcat}',
+        '${Explanation}')
+        returning*
+        ;`)
+        .then(() => res.sendStatus(200))
+        .catch((err) => console.log(err));
+    }};
+

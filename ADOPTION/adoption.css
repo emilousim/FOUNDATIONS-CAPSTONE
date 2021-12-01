@@ -156,11 +156,7 @@
       transition: all 0.3s ease-in-out;
       background: #fff;
     };
-  
-    .navbar__item {
-      width: 100%;
-    };
-  
+    
     .navbar__links {
       text-align: center;
       padding: 2rem;
@@ -269,7 +265,7 @@ input[type="checkbox"] + label{
 }
 
 
-input[type="submit"]{
+button{
     padding: .5em 1em;
     border-radius: 6px;
     background-color: cadetblue;

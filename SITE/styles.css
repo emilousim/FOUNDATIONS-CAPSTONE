@@ -97,10 +97,7 @@ html{
     align-items: center;
     list-style: none;
   }
-  
-  .navbar__item {
-    height: 80px;
-  }
+
   
   .navbar__links {
     color: #fff;
