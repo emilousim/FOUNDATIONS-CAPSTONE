@@ -25,7 +25,6 @@ module.exports = {
         .catch((err) => console.log(err));
     },
     createApplicants: (req, res) =>{
-        // axios.post('http://localhost:5500/adoption')
         const{
             fullname, 
             email, 

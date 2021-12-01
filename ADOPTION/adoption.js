@@ -3,13 +3,12 @@
     const email = document.querySelector('#email')
     const phone_number = document.querySelector('#phone_number')
     const nameofcat = document.querySelector('#nameofcat')
-    // const hadCatbefore = document.querySelector('#hadCatbefore')
     const Explanation = document.querySelector('#Explanation')
     
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    axios.post('http://localhost:5500/adoption', {
+    axios.post('http://localhost:5500/adoption/', {
         fullname: fullname.value,
         email: email.value,
         phone_number: phone_number.value,

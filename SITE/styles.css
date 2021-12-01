@@ -81,6 +81,7 @@ html{
     background-color: #9eacf1;
     background-image: linear-gradient(to top, #af50a6 0%, #fc466b 100%);
     background-size: 100%;
+    background-clip: border-box;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
