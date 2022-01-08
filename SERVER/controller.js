@@ -16,7 +16,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     getApplicants: (req, res) =>{
-        axios.get('http://localhost:5500/adoption')
+        axios.get('https://foundations-capstone-proj.herokuapp.com/')
         sequelize.query(
             `
             SELECT * FROM cc_applications
