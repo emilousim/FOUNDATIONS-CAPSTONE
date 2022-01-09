@@ -3,7 +3,7 @@ const { default: axios } = require('axios');
 // const { application } = require('express');
 const Sequelize = require("sequelize");
 
-const { CONNECTION_STRING } = process.env;
+// const { CONNECTION_STRING } = process.env;
 
 const sequelize = new Sequelize("postgres://ioquyjxtplllwl:1b29fb05b5d7964a68f22d5d618a87da9e8b4e1fbde8f3bc1aa7bb6cece81b04@ec2-54-204-128-96.compute-1.amazonaws.com:5432/dacde3md69caob",{
     dialect: "postgres",
