@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 
 const {CONNECTION_STRING} = process.env;
 
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
     dialect: 'postgres',
     dialectOptions: {
         ssl: {rejectUnauthorized: false

@@ -2,10 +2,9 @@ require("dotenv").config()
 const express = require("express");
 const app = express();
 const cors = require("cors")
-// const {SERVER_PORT} = process.env
+const {SERVER_PORT} = process.env
 const {seed} =require('./seed.js')
 const Sequelize = require("sequelize");
-const SERVER_PORT = process.env.PORT || 5500
 
 const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
     dialect: 'postgres',

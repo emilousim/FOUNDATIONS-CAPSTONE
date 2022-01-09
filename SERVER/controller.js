@@ -5,7 +5,7 @@ const Sequelize = require("sequelize");
 
 const { CONNECTION_STRING } = process.env;
 
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize("postgres://ioquyjxtplllwl:1b29fb05b5d7964a68f22d5d618a87da9e8b4e1fbde8f3bc1aa7bb6cece81b04@ec2-54-204-128-96.compute-1.amazonaws.com:5432/dacde3md69caob",{
     dialect: "postgres",
     dialectOptions: {
         ssl:{
@@ -16,7 +16,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 
 module.exports = {
     getApplicants: (req, res) =>{
-        axios.get('https://foundations-capstone-proj.herokuapp.com/')
+        axios.get('http://localhost:5500/adoption')
         sequelize.query(
             `
             SELECT * FROM cc_applications
