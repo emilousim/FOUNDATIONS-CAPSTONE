@@ -2,8 +2,7 @@
 
   *The what, why, and how:*
 
-  This website is deisgned to show and provide information on a pet rescue, titled here "Fierce Feline Rescue". Amongst a variety of other cool elements, this program can take in user input for an adoption application and store 
-in a database, making applying to adopt simple and automated for both the applicant and those reviewing the application.
+  This website is designed to show and provide information on a pet rescue, titled here "Fierce Feline Rescue". Amongst a variety of other cool elements, this program can take in user input for an adoption application and store it in a database hosted on heroku's pgweb, making applying to adopt simple for both the applicant and those reviewing the application.
 
   ## Table of Contents
   * [Installation](#installation)
