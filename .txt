@@ -1,2 +1,0 @@
-PROGRAMS USED IN THIS PROJECT: javascript, HTML, css, axios
-
