@@ -2,8 +2,7 @@
 
   *The what, why, and how:*
 
-  This website is deisgned to show and provide information on a pet rescue, titled here "Fierce Feline Rescue". Amongst a variety of other cool elements, this program can take in user input for an adoption application and store 
-in a database, making applying to adopt simple and automated for both the applicant and those reviewing the application.
+  This website is designed to show and provide information on a pet rescue, titled here "Fierce Feline Rescue". Amongst a variety of other cool elements, this program can take in user input for an adoption application and store it in a database hosted on heroku's pgweb, making applying to adopt simple for both the applicant and those reviewing the application.
 
   ## Table of Contents
   * [Installation](#installation)
@@ -15,7 +14,7 @@ in a database, making applying to adopt simple and automated for both the applic
   *Steps required to install project and how to get the development environment running:*
 
   In order to run this application yourself, you'll follow a couple of different steps. To generate and copy the files, you'll need to run 'git clone' + the project's github link (found under the green button labelled 'code' in 
-the right hand corner of the project's folder) in your machine's terminal. After this is finished, all you need to do is run "npm install" in order to install the npm package dependencies as specified in the package.json: axios, express, cors, dotenv, g, nodemon, pg, pg-hstore, and sequelize. Once all of this is complete, you're ready to start accepting those applications!
+the right hand corner of the project's folder) in your machine's terminal. After this is finished, all you need to do is run "npm install" in order to install the npm package dependencies as specified in the package.json: axios, express, cors, dotenv, nodemon, pg, pg-hstore, and sequelize. Once all of this is complete, you're ready to start accepting those applications!
 
   ## Usage
 
