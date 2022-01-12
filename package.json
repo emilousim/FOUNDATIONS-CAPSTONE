@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "\"foundations capstone project\"",
-  "main": "SERVER/BACKEND.js",
+  "main": "SERVER/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon SERVER/BACKEND.js"
+    "start": "nodemon SERVER/server.js"
   },
   "repository": {
     "type": "module",

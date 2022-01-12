@@ -16,7 +16,7 @@ const sequelize = new Sequelize(process.env.CONNECTION_STRING, {
 })
 // connects DB to backend using the postgreSQL URI defined as CONNECTION_STRING in .env file
 
-const {getApplicants, createApplicants} = require("./FRONTEND.js")
+const {getApplicants, createApplicants} = require("./controller.js")
 // requiring in our frontend file
 
 app.use(express.json())
@@ -25,7 +25,7 @@ app.use(cors())
 // adds an extra layer of security to our app, selects which origins can access our API. decides whether or not it's safe to send DB responses back
 
 app.post("/seed", seed)
-// express (app) handles the POST request and seeds the responds to the request to seed the database with the axios.post function in seed.js
+// express (app) handles the POST request and responds to the request to seed the database with the axios.post function in seed.js
 
 app.post("/adoption", createApplicants)
 // handles post request and pushes new applicants to our PGWeb DB
